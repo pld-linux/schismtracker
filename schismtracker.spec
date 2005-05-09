@@ -23,7 +23,8 @@ Klon Impulse Trackera z obs³ug± niemal wszystkich typów modu³ów.
 %setup -q 
 
 %build
-%configure --enable-alsa-mixer
+%configure \
+	--enable-alsa-mixer
 %{__make}
 
 %install
@@ -33,7 +34,7 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -c %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,6 +42,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/*.desktop
