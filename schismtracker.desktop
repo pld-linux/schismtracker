@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Schism Tracker
+Name[pl]=Schism Tracker
+Comment=Impulse Tracker clone
+Comment[pl]=Klon Impulse Trackera
+Exec=schism
+Terminal=false
+Type=Application
+Categories=Audio;Sequencer;
+Encoding=UTF-8
+# vi: encoding=utf-8
