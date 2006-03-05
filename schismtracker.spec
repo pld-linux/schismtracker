@@ -1,12 +1,13 @@
 Summary:	Impulse Tracker clone
 Summary(pl):	Klon Impulse Trackera
 Name:		schism
-Version:	0.19a
+Version:	0.2a
 Release:	1
+Epoch:		1	
 License:	GPL v2
 Group:		X11/Applications/Sound
 Source0:	http://rigelseven.com/schism/dl/%{name}-%{version}.tar.bz2
-# Source0-md5:	1bef3554f1ab3c4dfcf1cf46756fc85c
+# Source0-md5:	2b07f1f7657ab82ad6f0a737dda623eb
 Source1:	%{name}.desktop
 URL:		http://rigelseven.com/schism/
 BuildRequires:	SDL-devel >= 1.1.8
