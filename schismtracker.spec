@@ -1,5 +1,5 @@
 Summary:	Impulse Tracker clone
-Summary(pl):	Klon Impulse Trackera
+Summary(pl.UTF-8):   Klon Impulse Trackera
 Name:		schism
 Version:	0.2a
 Release:	1
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Impulse Tracker clone with support of almost all module types.
 
-%description -l pl
-Klon Impulse Trackera z obs≥ug± niemal wszystkich typÛw modu≥Ûw.
+%description -l pl.UTF-8
+Klon Impulse Trackera z obs≈ÇugƒÖ niemal wszystkich typ√≥w modu≈Ç√≥w.
 
 %prep
 %setup -q 
