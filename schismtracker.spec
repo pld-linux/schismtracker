@@ -1,5 +1,5 @@
 Summary:	Impulse Tracker clone
-Summary(pl.UTF-8):   Klon Impulse Trackera
+Summary(pl.UTF-8):	Klon Impulse Trackera
 Name:		schism
 Version:	0.2a
 Release:	1
