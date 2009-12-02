@@ -1,17 +1,19 @@
 Summary:	Impulse Tracker clone
 Summary(pl.UTF-8):	Klon Impulse Trackera
-Name:		schism
-Version:	0.2a
+Name:		schismtracker
+Version:	20090817
 Release:	1
-Epoch:		1	
+Epoch:		1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://rigelseven.com/schism/dl/%{name}-%{version}.tar.bz2
-# Source0-md5:	2b07f1f7657ab82ad6f0a737dda623eb
+Source0:	http://schismtracker.org/dl/%{name}-%{version}.tar.bz2
+# Source0-md5:	172e9a58ca7b694eb88a6b6b6073a3f7
 Source1:	%{name}.desktop
-URL:		http://rigelseven.com/schism/
+Source2:	itf.desktop
+URL:		http://www.schismtracker.org/
 BuildRequires:	SDL-devel >= 1.1.8
 Requires:	SDL >= 1.1.8
+Obsoletes:	schism
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,27 +23,40 @@ Impulse Tracker clone with support of almost all module types.
 Klon Impulse Trackera z obsługą niemal wszystkich typów modułów.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
-%configure \
-	--enable-alsa-mixer
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_desktopdir}
+install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/{16x16,22x22,24x24,32x32,36x36,48x48,64x64,72x72,96x96,128x128,scalable}/apps
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
+install icons/schism-icon-16.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/16x16/apps/schismtracker.png
+install icons/schism-icon-22.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/22x22/apps/schismtracker.png
+install icons/schism-icon-24.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/24x24/apps/schismtracker.png
+install icons/schism-icon-32.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/32x32/apps/schismtracker.png
+install icons/schism-icon-36.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/36x36/apps/schismtracker.png
+install icons/schism-icon-48.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/48x48/apps/schismtracker.png
+install icons/schism-icon-64.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/64x64/apps/schismtracker.png
+install icons/schism-icon-72.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/72x72/apps/schismtracker.png
+install icons/schism-icon-96.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/96x96/apps/schismtracker.png
+install icons/schism-icon-128.png $RPM_BUILD_ROOT%{_iconsdir}/hicolor/128x128/apps/schismtracker.png
+install icons/schism-icon.svg $RPM_BUILD_ROOT%{_iconsdir}/hicolor/scalable/apps/schismtracker.svg
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
+%doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/*.desktop
+%{_iconsdir}/hicolor/*/*/*
