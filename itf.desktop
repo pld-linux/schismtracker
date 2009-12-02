@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Schism Tracker font editor
+Name[pl]=Edytor fontów Schism Trackera
+Comment=ITF clone
+Comment[pl]=Klon ITF
+Exec=schismtracker --font-editor
+Icon=schismtracker
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Audio;Sequencer;
+# vi: encoding=utf-8
