@@ -1,13 +1,13 @@
 Summary:	Impulse Tracker clone
 Summary(pl.UTF-8):	Klon Impulse Trackera
 Name:		schismtracker
-Version:	20090817
+Version:	20120105
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications/Sound
 Source0:	http://schismtracker.org/dl/%{name}-%{version}.tar.bz2
-# Source0-md5:	172e9a58ca7b694eb88a6b6b6073a3f7
+# Source0-md5:	c85ee0750b2890cbd123ff6f9cb827b9
 Source1:	%{name}.desktop
 Source2:	itf.desktop
 URL:		http://www.schismtracker.org/
@@ -58,5 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/schismtracker.1*
 %{_desktopdir}/*.desktop
 %{_iconsdir}/hicolor/*/*/*
